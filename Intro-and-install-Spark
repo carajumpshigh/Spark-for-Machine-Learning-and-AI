@@ -1,0 +1,18 @@
+"""
+Features: distributed, processing, big data
+Components: MLlib, Spark SQL, Spark Streaming, GraphX
+Use cases: Real-time monitoring, text analysis, ecommerce pattern analysis, healthcare and genomic analysis
+
+Steps: Preprocessing(collect, reformat, transform data), model building(apply algorithms to training data), validation(assess quality)
+      -Preprocessing: extract, transform and load data to staging area;
+                      review data for missing data and invalid values;
+                      normalize and scale numeric data;
+                      standardize categorical values;
+      -Model building: select algorithms;
+                       executing algorithms to fit data to models;
+                       tuning hyperparameters
+      -Validating models: apply models to additional test sets;
+                          measuring quality of models(accuracy, precision, sensitivity)
+Install: download package(spark,java,python)-> decompress and rename-> cd spark-> ls/dir->cd bin-> ls/dir-> .\pyspark
+
+"""
