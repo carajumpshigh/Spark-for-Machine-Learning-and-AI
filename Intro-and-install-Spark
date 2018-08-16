@@ -13,6 +13,22 @@ Steps: Preprocessing(collect, reformat, transform data), model building(apply al
                        tuning hyperparameters
       -Validating models: apply models to additional test sets;
                           measuring quality of models(accuracy, precision, sensitivity)
-Install: download package(spark,java,python)-> decompress and rename-> cd spark-> ls/dir->cd bin-> ls/dir-> .\pyspark
+Install: download package(spark,java,python)-> decompress and rename-> cd spark （ls/dir->） cd bin-> （ls/dir->） .\pyspark
 
 """
+
+
+# Dataframe
+emp_df = spark.read.csv("C:\Users\212720797\Desktop\Exercise Files\Ch01\01_04.txt",header=True)
+emp_df
+emp_df.schema
+emp_df.printSchema()    # names and types of data
+emp_df.columns    # list of columns' names
+emp_df.take(5)    # first 5 rows
+emp_df.count()    # number of rows
+sample_df = emp_df.sample(False,0.1)      # no replacement of raw data, pick 10% of raw data
+sample_df.count()
+emp_mgrs_df = emp_df.filter("salary >= 100000")
+emp_mgrs_df.count()
+emp_mgrs_df.select("salary").show()       # top 20 salaries
+
